@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!-- As 4 meta tags acima *devem* vir primeiro na cabeça;
+        qualquer outro conteúdo principal deve vir *depois* dessas tags -->
+
+    <!-- Título -->
+    <title>{% block title %}{% endblock title %}</title>
+
+    <!-- Favicon-->
+    <link rel="icon" href="{% static 'img/core-img/favicon_white.png' %}">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+<body>
+    <!-- ##### Busca Area ##### -->
+
+    <!-- ##### Menu Area ##### -->
+    <menu>{% include 'partials/_menu.html' %}</menu>
+
+    <main class="container">
+
+        <!-- Preloader 
+        <div id="preloader">
+            <i class="circle-preloader"></i>
+            <img src="{% static 'img/core-img/database.png' %}" alt="">
+        </div>
+        -->
+        
+        <!-- ##### Block Content Area Start ##### -->
+        {% block content %}{% endblock content %}
+    </main>
+
+    <!-- ##### Fototer Area Start ##### -->
+    <footer class="footer-area">{% include 'partials/_footer.html' %}</footer>
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'js/bootstrap/bootstrap.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'js/plugins/plugins.js' %}"></script>
+    <!-- Active JS -->
+    <script src="{% static 'js/active.js' %}"></script>
+</body>
+</html>
